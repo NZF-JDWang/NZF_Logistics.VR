@@ -1,46 +1,42 @@
-
-
-//format - ["Name you want to display", "classname", cost]
-
 nzf_crates = [
-
+	["Spare Wheel","ACE_Wheel", 0],
+	["Ammo","ACE_Box_Ammo", 5]
 ];
 
 nzf_vehicles = [
 
-	["MRZR","rhsusf_mrzr4_d", 50],
-	[".50Cal HMMWV","rhsusf_m1165a1_gmv_m2_m240_socom_d", 250],
-	["Minigun HMMWV","rhsusf_m1165a1_gmv_m134d_m240_socom_d", 500],
-	["MRAP","rhsusf_m1240a1_m2_usarmy_d", 1000],
-	["SOCOM Truck","rhsusf_M1239_M2_socom_d", 750]
+	["Quad Bike","B_Quadbike_01_F", 50],
+	["Polaris","B_LSV_01_unarmed_F", 250],
+	["MRAP","B_MRAP_01_F", 500],
+	["HEMTT","B_Truck_01_mover_F", 1000],
+	["Merkava","B_MBT_01_cannon_F", 2000]
 
 ];
 
 nzf_aircraft = [
 
-	["MH-6 Little Bird","RHS_MELB_MH6M", 500],
-	["AH-6 Littlebird","RHS_MELB_AH6M", 750],
-	["MH-60 Blackhawk","vtx_MH60M", 750],
-	["MH47G Chinook","TF373_SOAR_MH47G_EasyActions", 1000]
+	["Little Bird","B_Heli_Light_01_dynamicLoadout_F", 500],
+	["Ghosthawk","B_Heli_Transport_01_F", 750],
+	["Huron","B_Heli_Transport_03_F", 750],
+	["Wipeout","B_Plane_CAS_01_dynamicLoadout_F", 1000]
 
 ];
 
-//format - [Object, "OWNER"]
-nzf_factories = [
+nzf_pads = [
 
+	helipad_1,
+	helipad_2	
 	
+];
 
+nzf_hangars = [
+
+	hangar_1
 
 ];
 
+logiCrate_small = ["CargoNet_01_box_F", 50];
 
+logiFactorySupplies = 0;
 
-
-
-
-
-
-
-
-	
-
+logiInit = true;

@@ -5,19 +5,104 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=545;
+	class ItemIDProvider
+	{
+		nextID=192;
+	};
+	class LayerIndexProvider
+	{
+		nextID=22;
+	};
 	class Camera
 	{
-		pos[]={4762.0459,15,2933.4778};
-		dir[]={0.20136178,-0.17364818,-0.96400195};
-		up[]={0.035505515,0.98480779,-0.16997956};
-		aside[]={-0.97887325,0,-0.20446812};
+		pos[]={4770.7251,8.6115866,2912.0566};
+		dir[]={-0.043160882,-0.36362371,0.93054557};
+		up[]={-0.016847609,0.93154597,0.36323321};
+		aside[]={0.99892616,1.8626451e-009,0.046332538};
 	};
 };
 binarizationWanted=0;
 sourceName="NZF_Logistics";
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Missions_F_Oldman",
+	"A3_Structures_F_Tank_Military_RepairDepot",
+	"A3_Props_F_Enoch_Military_Camps",
+	"A3_Misc_F_Helpers",
+	"A3_Structures_F_Heli_VR_Helpers",
+	"A3_Structures_F_Bootcamp_VR_Helpers"
+};
 class AddonsMetaData
 {
+	class List
+	{
+		items=8;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Missions_F_Oldman";
+			name="Arma 3 Old Man - Playable Content";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Structures_F_Tank";
+			name="Arma 3 Tank - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Props_F_Enoch";
+			name="Arma 3 Contact Platform - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Misc_F";
+			name="Arma 3 - 3D Aids and Helpers";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="A3_Structures_F_Bootcamp";
+			name="Arma 3 Bootcamp Update - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+dlcs[]=
+{
+	"Tank",
+	"Contact",
+	"Heli"
 };
 randomSeed=15140301;
 class ScenarioData
@@ -44,5 +129,475 @@ class Mission
 		minute=37;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=13;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4765.9536,5.0014391,2914.5071};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=1;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4751.999,5,2928.001};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="helipad_1";
+			};
+			id=3;
+			type="Land_HelipadCircle_F";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4734.2212,5,2928.0657};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="helipad_2";
+			};
+			id=4;
+			type="Land_HelipadCircle_F";
+		};
+		class Item3
+		{
+			dataType="Layer";
+			name="LogiHub";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4766.0801,6.7976351,2917.25};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="[this, logiHubShelf_1] call BIS_fnc_attachToRelative;";
+						name="logiHubLaptop";
+					};
+					id=2;
+					type="Item_Laptop_Unfolded";
+					atlOffset=1.1630583;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4766.4551,7.4179983,2918.531};
+						angles[]={0,4.712389,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="LogiHub_1";
+					};
+					id=8;
+					type="Land_RepairDepot_01_tan_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4766.083,6.4914422,2917.45};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="[this, logiHub_1] call BIS_fnc_attachToRelative;";
+						name="logiHubShelf_1";
+					};
+					id=9;
+					type="Land_PortableDesk_01_panel_sand_F";
+					atlOffset=1.0640583;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4766.0313,7.6830721,2917.6643};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="light = ""#lightpoint"" createvehicle position this;  " \n "light setlightbrightness 0.5;  " \n "light setlightcolor [0.1,0.1,0.1];  " \n "light setlightambient [0.1,0.1,0.1]; " \n "" \n "this hideObject true;";
+					};
+					id=65;
+					type="Sign_Sphere10cm_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4778.0308,5.0005684,2920.0029};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="logiHubSpawn";
+					};
+					id=5;
+					type="VR_Area_01_square_4x4_grey_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=10;
+			atlOffset=0.94526768;
+		};
+		class Item4
+		{
+			dataType="Layer";
+			name="LogiFactory";
+			state=1;
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4775.8926,6.8346519,2895.7214};
+						angles[]={0,3.1415927,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="[this, logiFactoryShelf_1] call BIS_fnc_attachToRelative;";
+						name="logiFactoryLaptop_1";
+					};
+					id=11;
+					type="Item_Laptop_Unfolded";
+					atlOffset=1.1630745;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4775.5254,7.4549985,2894.437};
+						angles[]={-0,1.5707964,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="LogiFactoryHub_1";
+					};
+					id=12;
+					type="Land_RepairDepot_01_tan_F";
+					atlOffset=0.037000179;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4775.897,6.5284591,2895.519};
+						angles[]={0,3.1415927,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="[this, logiHub_1] call BIS_fnc_attachToRelative;";
+						name="logiFactoryShelf_1";
+					};
+					id=13;
+					type="Land_PortableDesk_01_panel_sand_F";
+					atlOffset=1.0640745;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4775.9575,7.6820788,2895.2688};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="light = ""#lightpoint"" createvehicle position this;  " \n "light setlightbrightness 0.5;  " \n "light setlightcolor [0.1,0.1,0.1];  " \n "light setlightambient [0.1,0.1,0.1]; " \n "" \n "this hideObject true;";
+					};
+					id=176;
+					type="Sign_Sphere10cm_F";
+					atlOffset=2.6820788;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4765.9429,5.0005684,2894.0007};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="logiFactorySpawn";
+					};
+					id=7;
+					type="VR_Area_01_square_4x4_grey_F";
+				};
+			};
+			id=14;
+			atlOffset=0.95427275;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4710.3638,5.0005684,2926.9861};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="hangar_1";
+			};
+			id=45;
+			type="VR_Area_01_square_4x4_grey_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4772.0181,5.0005684,2920.094};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="logiHubDepot";
+			};
+			id=184;
+			type="VR_Area_01_square_4x4_grey_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item7
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4778.0869,5,2919.2329};
+			};
+			title="Crates and Non Flying Vehicles Spawn Here";
+			id=186;
+		};
+		class Item8
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4772.229,5,2919.1741};
+			};
+			title="Deliver Supplies Here";
+			id=187;
+		};
+		class Item9
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4742.481,5,2927.658};
+			};
+			title="Choppers spawn only on the empty pads ";
+			description="Pads will be filled in the oder they appear in nzf_pads (defined in logistics.sqf)";
+			id=188;
+		};
+		class Item10
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4710.79,5,2926.3459};
+			};
+			title="Fixed Wing Spawn here";
+			id=189;
+		};
+		class Item11
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4776.144,5,2896.3899};
+			};
+			title="Request Supplies Here ";
+			description="ACE interaction only appears when you have enough supplies (cost is defined in logistics.sqf) ";
+			id=190;
+		};
+		class Item12
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4765.8218,5,2895.0669};
+			};
+			title="Supplies spawn here";
+			id=191;
+		};
 	};
 };

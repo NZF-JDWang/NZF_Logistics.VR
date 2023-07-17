@@ -1,0 +1,8 @@
+#include "NZFLogistics\defines.hpp"
+#include "NZFLogistics\controls.hpp"
+
+class CfgFunctions
+{
+	#include "NZFLogistics\cfgFunctions.hpp"
+
+};
