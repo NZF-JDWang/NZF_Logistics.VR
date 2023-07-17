@@ -11,18 +11,22 @@ switch (_index) do {
 
 		_crate = nzf_crates select _object select 1;
 		_crate createvehicle (getpos logiHubSpawn);
+		_cost = 0 - (nzf_crates select _object select 2);
+		[west, _cost, true] call ace_fortify_fnc_updateBudget;
 
 	};
 	case 1: {
 
 		_vehicle = nzf_vehicles select _object select 1;
 		_vehicle createvehicle (getpos logiHubSpawn);
-
+		_cost = 0 - (nzf_vehicles select _object select 2);
+		[west, _cost, true] call ace_fortify_fnc_updateBudget;
 	};
 	case 2: {
 
 		_aircraft = nzf_aircraft select _object select 1;
-		
+		_cost = 0 - (nzf_aircraft select _object select 2);
+		[west, _cost, true] call ace_fortify_fnc_updateBudget;
 		
 		if (_aircraft isKindOf "helicopter") then
 		{
