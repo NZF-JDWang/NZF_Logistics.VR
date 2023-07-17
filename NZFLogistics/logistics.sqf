@@ -48,7 +48,7 @@ logiCrate_small = ["CargoNet_01_box_F", 50];
 
 //This is your beginning amount of supplies when the mission starts
 //This will be overwritten once persistence is incorporated
-logiFactorySupplies = 0;
+logiFactorySupplies = 150;
 
 //This is the number of supplies produced per production cycle (currently 60 seconds) 
 logiProductionRate = 10;
