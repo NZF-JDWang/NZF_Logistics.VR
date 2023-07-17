@@ -38,5 +38,6 @@ nzf_hangars = [
 logiCrate_small = ["CargoNet_01_box_F", 50];
 
 logiFactorySupplies = 0;
+logiProductionRate = 10;
 
 logiInit = true;

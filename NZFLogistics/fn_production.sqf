@@ -2,7 +2,7 @@ if (!isServer) exitwith {};
 
 while {true} do {
 
-	logiFactorySupplies = logiFactorySupplies + 10;
+	logiFactorySupplies = logiFactorySupplies + logiProductionRate;
 
 uiSleep 60;
 };
