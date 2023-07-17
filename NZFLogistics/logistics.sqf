@@ -53,6 +53,9 @@ logiFactorySupplies = 0;
 //This is the number of supplies produced per production cycle (currently 60 seconds) 
 logiProductionRate = 10;
 
+//This sets the base percentage you will get back when scraping a vehicle (to be implemented)
+logiScrapReturn = 50;
+
 //Flag to indicate this file has been run and persistence can now update the number of supplies 
 //(Once persitence is implemented)
 logiInit = true;
