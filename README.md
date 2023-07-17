@@ -4,7 +4,7 @@ Basic template for a factory, logistic loop.
 All setting are in NZFLogistics\logistics.sqf - There you can set where things will spawn, their cost, the factory production rate etc etc.
 Comments in the file will let you know what each value is.
 
-The system is all based around the ACE fortify budget, with all vehicles spawn or fortifications place taking away from the budget, while all supplies delivered, or vehicels scrapped adding to the budget. It is also possible to add or subtract to the budget using the code 
+The system is all based around the ACE fortify budget, with all vehicles spawn or fortifications placed taking away from the budget, while all supplies delivered, or vehicels scrapped adding to the budget. It is also possible to add or subtract to the budget using the code 
 
 [west, -250, false] call ace_fortify_fnc_updateBudget;
 
