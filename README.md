@@ -13,6 +13,7 @@ With the -250 being the amount you wish to add or in this case subtracr.
 In this scenario you start in front of the Logi Hub - The Logi Hub is where you can request crate/vehicles/aircraft. 
 It is also where you bring supplies to convert them to $$$ in order to fund your vehicles.
 Eventually you will also be able to bring vehicles to scrap for a percentage of their purchase price *Note this will only apply to vehicles you can spawn, if you can't spawn it you can't scrap it.
+
 ACE interact with the laptop to access the Logi Hub
 
 Note Crate and Vehicles will spawn on the marker "logiHubSpawn" while Helicopters will spawn on the markers listed in the "nzf_pads" array in NZFLogistics\logistics.sqf 
