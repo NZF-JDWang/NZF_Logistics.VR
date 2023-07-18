@@ -1,6 +1,7 @@
 [] execVM "NZFLogistics\logistics.sqf";
 [] spawn nzf_fnc_production;
 
+//Add ace interactions to the laptops
 _action = ["logiInterface","Open Logistics Interface","\A3\Ui_f\data\IGUI\Cfg\simpleTasks\types\container_ca.paa",{execVM "NZFlogistics\openLogiDialog.sqf"},{true}] call ace_interact_menu_fnc_createAction;   
 [logiHubLaptop, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
@@ -12,9 +13,11 @@ _action2 = ["logiFactory","Request Supplies","",{[] call nzf_fnc_suppliesSpawn;}
 
 //*******************************************************************
 //Fortify setup
+//Sets starting budget to $10000 and the cost of a sandbag wall and bunker to $5 and $50 respectively
 
 [west, 10000, [
-
+  ["Land_BagFence_Long_F", 5],
+  ["Land_BagBunker_Small_F", 50]
 ]] call acex_fortify_fnc_registerObjects;
 
 //*******************************************************************
