@@ -58,4 +58,4 @@ logiScrapReturn = 50;
 
 //Flag to indicate this file has been run and persistence can now update the number of supplies 
 //(Once persitence is implemented)
-logiInit = true;
+missionNamespace setVariable ["logiInit",true,true];
