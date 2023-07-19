@@ -1,5 +1,3 @@
-if (!isServer) exitwith {};
-
 _index = lbCurSel 2100;
 _object = lbCurSel 1500;
 
@@ -76,5 +74,5 @@ switch (_index) do {
 				};
 		} else {Hint "You cannot afford this"};
 	};
-
+[] call grad_persistence_fnc_saveMission;
 };

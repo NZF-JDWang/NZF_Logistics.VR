@@ -8,8 +8,8 @@ class CfgFunctions
 
 class CfgGradPersistence {
     missionTag = "Logistics Test";
-    loadOnMissionStart = 1;
-    missionWaitCondition = "logiInit";
+    loadOnMissionStart = 0;
+    missionWaitCondition = "true";
     playerWaitCondition = "true";
 
     saveUnits = 0;
@@ -30,6 +30,18 @@ class CfgGradPersistence {
 
     blacklist[] = {
 
+    };
+	class customVariables {
+		class supplies {
+			varName = "logiFactorySupplies";
+			varNamespace = "mission";
+			public = 1;
+		};
+		class budget {
+			varName = "logiBudget";
+			varNamespace = "mission";
+			public = 1;
+		};
     };
 
 };

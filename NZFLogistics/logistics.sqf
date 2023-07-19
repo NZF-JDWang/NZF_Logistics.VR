@@ -44,18 +44,20 @@ nzf_hangars = [
 ];
 //This defines the type of crate to be spawned and the amount of supplies it is worth 
 //This will be expanded to allow different sized crates (small/med/large)
-logiCrate_small = ["CargoNet_01_box_F", 50];
+logiCrate_small = ["Box_NATO_Ammo_F", 50];
+logiCrate_medium = ["CargoNet_01_box_F", 250];
+logiCrate_large = ["B_Slingload_01_Cargo_F", 2500];
 
 //This is your beginning amount of supplies when the mission starts
 //This will be overwritten once persistence is incorporated
-logiFactorySupplies = 150;
+missionNamespace setVariable ["logiFactorySupplies",150,true];
 
 //This is the number of supplies produced per production cycle (currently 60 seconds) 
-logiProductionRate = 10;
+missionNamespace setVariable ["logiProductionRate",10,true];
 
-//This sets the base percentage you will get back when scraping a vehicle (to be implemented)
-logiScrapReturn = 50;
+//This sets the base percentage you will get back when scraping a vehicle
+missionNamespace setVariable ["logiScrapReturn",50,true];
 
-//Flag to indicate this file has been run and persistence can now update the number of supplies 
-//(Once persitence is implemented)
-missionNamespace setVariable ["logiInit",true,true];
+//Now load persistence
+sleep 1;
+[] call grad_persistence_fnc_loadMission;
