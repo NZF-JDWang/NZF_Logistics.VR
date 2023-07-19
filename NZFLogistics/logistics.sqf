@@ -48,9 +48,6 @@ logiCrate_small = ["Box_NATO_Ammo_F", 50];
 logiCrate_medium = ["CargoNet_01_box_F", 250];
 logiCrate_large = ["B_Slingload_01_Cargo_F", 2500];
 
-//This is your beginning amount of supplies when the mission starts
-//This will be overwritten once persistence is incorporated
-missionNamespace setVariable ["logiFactorySupplies",150,true];
 
 //This is the number of supplies produced per production cycle (currently 60 seconds) 
 missionNamespace setVariable ["logiProductionRate",10,true];
@@ -58,6 +55,6 @@ missionNamespace setVariable ["logiProductionRate",10,true];
 //This sets the base percentage you will get back when scraping a vehicle
 missionNamespace setVariable ["logiScrapReturn",50,true];
 
-//Now load persistence
+//Flag to indicate this file has been run and persistence can now update the number of supplies 
 sleep 1;
-[] call grad_persistence_fnc_loadMission;
+missionNamespace setVariable ["logiInit",true,true];

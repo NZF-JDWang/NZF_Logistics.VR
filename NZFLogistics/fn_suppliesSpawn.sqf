@@ -1,5 +1,3 @@
-if (!isServer) exitwith {};
-
 params ["_supplies"];
 
 _logiFactorySupplies = missionNamespace getVariable "logiFactorySupplies";
@@ -11,6 +9,7 @@ switch (_supplies) do
 
 	_crate = (logiCrate_small select 0) createVehicle (getpos logiFactorySpawn);
 	_logiFactorySupplies = _logiFactorySupplies - (logiCrate_small select 1);
+	hint "small";
 		
 	};
 	case 250: {
@@ -29,5 +28,5 @@ switch (_supplies) do
 
 missionNamespace setVariable ["logiFactorySupplies",_logiFactorySupplies,true];
 
-[_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];
-[] call grad_persistence_fnc_saveMission;
+sleep 1;
+remoteExec ["grad_persistence_fnc_saveMission",2];

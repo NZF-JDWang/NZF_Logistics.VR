@@ -8,9 +8,6 @@ while {true} do {
 	_logiFactorySupplies = _logiFactorySupplies + _logiProductionRate;
 
 	missionNamespace setVariable ["logiFactorySupplies",_logiFactorySupplies,true];
-
-	//logibudget = [west] call ace_fortify_fnc_getBudget;
-	
 	
 uiSleep 60;
 };

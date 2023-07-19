@@ -74,5 +74,7 @@ switch (_index) do {
 				};
 		} else {Hint "You cannot afford this"};
 	};
-[] call grad_persistence_fnc_saveMission;
 };
+
+sleep 1;
+remoteExec ["grad_persistence_fnc_saveMission",2];
