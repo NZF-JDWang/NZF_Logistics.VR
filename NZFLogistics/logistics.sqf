@@ -1,8 +1,10 @@
 //Add any crates etc you want to be able to spwn into this array 
 //Format is [What you want to call the crate, classname of the object, cost of the object]
 nzf_crates = [
+
 	["Spare Wheel","ACE_Wheel", 0],
 	["Ammo","ACE_Box_Ammo", 5]
+
 ];
 //This array is for any vehicles you don't want to spawn on helipads or in hangars
 //Same format as above

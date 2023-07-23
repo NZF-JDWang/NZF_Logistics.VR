@@ -9,8 +9,7 @@ switch (_supplies) do
 
 	_crate = (logiCrate_small select 0) createVehicle (getpos logiFactorySpawn);
 	_logiFactorySupplies = _logiFactorySupplies - (logiCrate_small select 1);
-	hint "small";
-		
+			
 	};
 	case 250: {
 

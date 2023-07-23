@@ -10,5 +10,6 @@ class NZF
 		class production {};
 		class suppliesSpawn {};
 		class suppliesDelivered {};
+		class vehicleScrap {};
 	};
 };
